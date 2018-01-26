@@ -1,0 +1,23 @@
+.Navbar{
+    width:100%;
+    text-align:right;
+    font-size:25px;
+    height:35px;
+    position: absolute;;
+    z-index: 1;
+}
+
+.NavItem{
+    display:inline;
+    padding-right:35px;
+    padding-left:25px;
+    z-index:2;
+}
+
+.links{
+    text-decoration: none;
+    color:white;
+}
+body{
+    margin:0;
+}

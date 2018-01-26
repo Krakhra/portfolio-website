@@ -1,0 +1,96 @@
+.about{
+    padding-top:20px;
+    background-color:black;
+}
+.aboutContent{
+    margin-top:35px;
+    height:100%;
+    background-color:black;
+    background-attachment: fixed;
+}
+.picCont{
+    background-image: url('./assets/mountain.jpg');
+    background-repeat:no-repeat;
+    background-size:cover;
+    filter:opacity(50%);
+    margin-top:100px;
+    width:100%;
+    height:350px;
+    color:white;
+    font-family: 'Roboto', sans-serif;
+    font-size:60px;
+    text-align:center;
+    background-attachment: fixed;
+}
+
+.links{
+    color:white;
+}
+
+.content2{
+    padding-top:100px;
+    color:white;
+    font-family: 'Roboto', sans-serif;
+    font-size:40px;
+    text-align: center;
+}
+body,html{
+    height:100%;
+}
+.me{
+    width:100%;
+    height:550px;
+    background-image:url('./assets/typing.jpeg');
+    filter:opacity(50%);
+    background-size:cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+.exp{
+    width:100%;
+    height:200px;
+    background-color:black;
+    color:white;
+    font-family: 'Roboto', sans-serif;
+    font-size:17px;
+    text-align: center;
+}
+.exp1{
+    width:100%;
+    height:200px;
+    background-color:black;
+    color:white;
+    font-family: 'Roboto', sans-serif;
+    font-size:17px;
+    text-align: center;
+}
+
+.img1{
+    width:100%;
+    height:550px;
+    background-image:url('./assets/school.jpg');
+    filter:opacity(50%);
+    background-size:cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.img2{
+    width:100%;
+    height:550px;
+    background-image:url('./assets/barce.jpg');
+    filter:opacity(50%);
+    background-size:cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.exp2{
+    width:100%;
+    height:200px;
+    background-color:black;
+    color:white;
+    font-family: 'Roboto', sans-serif;
+    font-size:17px;
+    text-align: center;
+}
