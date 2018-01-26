@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import './Home.css'
 export default class Home extends Component{
-
+    //homepage set up cloud animations
     render(){
         return(
             <div className= "background">

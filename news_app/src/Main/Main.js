@@ -4,6 +4,7 @@ import Home from '../Home/Home';
 import About from '../About/About';
 import {Switch,Route} from 'react-router-dom';
 
+//react routing 
 const Main = () => (
     <div>
         <Switch>

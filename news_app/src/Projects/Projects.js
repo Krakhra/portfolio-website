@@ -10,12 +10,13 @@ export default class Projects extends Component {
             articles:[],
         }
     }
-
+    //get article data from server
     componentDidMount() {
         fetch('/api/articles')
         .then(res=>res.json())
         .then(articles => this.setState({articles}))
     }
+    
     render() {
 
         return(

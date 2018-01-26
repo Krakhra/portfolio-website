@@ -10,6 +10,7 @@ var pg = require('pg');
 var morgan = require('morgan');
 var data;
 
+//pool for articles
 var pool = new pg.Pool({
     port:5433,
     password: 'rakhra22',
@@ -19,6 +20,7 @@ var pool = new pg.Pool({
     user: 'postgres'  
 });
 
+//pool for notes
 var pool2 = new pg.Pool({
     port:5433,
     password: 'rakhra22',
@@ -28,13 +30,14 @@ var pool2 = new pg.Pool({
     user: 'postgres'  
 });
 
-
+//function to insert all articles into the db
 function insertDb(articles){
 
     pool.connect((err,db,done) =>{
         if(err) throw err;
 
         for(i=0; i<articles.length; i++){
+            //use values to prevent sql injections
             db.query('INSERT INTO articles (id, url, description) VALUES($1, $2, $3)',[i, articles[i].url, articles[i].description],(err,table)=>{
                 done();
                 if(err){
@@ -76,6 +79,7 @@ function insertApiData(){
 
 }
 
+//function to get data from db
 function getFromDb(){
     var articles = [];
     pool.connect((err, db, done)=> {
@@ -94,7 +98,7 @@ function getFromDb(){
         }
     })
 }
-
+//parser function 
 function trendCounter(description){
     var positiveCounter=0;
     var negativeCounter=0;
@@ -112,15 +116,18 @@ function trendCounter(description){
     var file = new JFile(fileNamePos);
     var file2 = new JFile(fileNameNeg);
 
+    //confirm correct arguments
     if (process.argv.length < 3) {
         console.log('Usage: node ' + process.argv[1] + ' FILENAME');
         process.exit(1);
     }
     
+    //decalaring file names
     posWords = file.lines;
     negWords = file2.lines;
     console.log(description);
 
+    //loop that looks for matches
     for(i = 0; i < description.length; i++){
         tempString = description[i].description;
         descripArray[i] = description[i].description;
